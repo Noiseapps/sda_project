@@ -1,17 +1,20 @@
 package pl.noiseapps.sample.api.model;
 
 import com.google.gson.annotations.SerializedName;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Main {
 
-    public double temp;
+    double temp;
     @SerializedName("feels_like")
-    public double feelsLike;
-    public double humidity;
+    double feelsLike;
+    double humidity;
 }
